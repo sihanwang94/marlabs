@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  pageTitle : string = 'marlabs - Angular 2'; //name:type = 'value';
 }
