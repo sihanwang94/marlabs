@@ -1,5 +1,4 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { isNgTemplate } from '../../../node_modules/@angular/compiler';
 
 @Pipe({
   name: 'products'

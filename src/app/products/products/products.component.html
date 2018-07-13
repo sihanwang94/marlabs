@@ -28,7 +28,9 @@
         <td>{{product.productCode}}</td>
         <td>{{product.releaseDate}}</td>
         <td>{{product.price}}</td>
-        <td>{{product.starRating}}</td>
+        <td>
+          <app-rating [rating] = "product.starRating"></app-rating>
+        </td>
       </tr>
     </table>
   </div>
