@@ -2,9 +2,9 @@
   <div class = "panel-heading">{{pageTitle}}</div>
   <div class="panel-body">
     <div>
-      <input type="text" [(ngModel)]="filterBy" placeholder="Filter products" class="form-control"/>
-      <div class="alert alert-success">
-        Products filetered by :
+      <input type="text" [(ngModel)]="filterBy" placeholder="Filter products" class="form-control" />
+      <div class="alert alert-success" *ngIf="filterBy" >
+        Products filetered by : {{filterBy}}
       </div>
     </div>
     <table class="table table-bordered" *ngIf="products && products.length">
@@ -14,13 +14,13 @@
               {{showHideImg ? 'Hide Image' : 'Show Image'}}
             </button>
           </th>
-          <th>Priduct Name</th>
-          <th>Priduct Code</th>
+          <th>Product Name</th>
+          <th>Product Code</th>
           <th>Release</th>
           <th>Price</th>
           <th>Rating</th>
       </tr>
-      <tr *ngFor="let product of products">
+      <tr *ngFor="let product of products | products:filterBy">
         <td>
           <img *ngIf="showHideImg" [src]="product.imageUrl" style="width:50px;"/>
         </td>
