@@ -1,6 +1,12 @@
 <div class="panel panel-primary">
   <div class = "panel-heading">{{pageTitle}}</div>
   <div class="panel-body">
+    <div>
+      <input type="text" [(ngModel)]="filterBy" placeholder="Filter products" class="form-control"/>
+      <div class="alert alert-success">
+        Products filetered by :
+      </div>
+    </div>
     <table class="table table-bordered" *ngIf="products && products.length">
       <tr>
           <th>
