@@ -29,7 +29,7 @@
         <td>{{product.releaseDate}}</td>
         <td>{{product.price}}</td>
         <td>
-          <app-rating [rating] = "product.starRating"></app-rating>
+          <app-rating [rating] = "product.starRating" (ratingToParent) = "ratingFromChild($event)" ></app-rating>
         </td>
       </tr>
     </table>

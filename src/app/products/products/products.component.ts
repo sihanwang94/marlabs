@@ -22,4 +22,9 @@ export class ProductsComponent implements OnInit {
     this.showHideImg = !this.showHideImg;
   }
 
+  ratingFromChild(rating:string) {
+    //alert(rating);
+    this.pageTitle = rating;
+  }
+
 }
