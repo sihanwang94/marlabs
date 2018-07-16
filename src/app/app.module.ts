@@ -8,6 +8,7 @@ import { ProductsComponent } from './products/products/products.component';
 import { ProductsPipe } from './products/products.pipe';
 import { RatingComponent } from './products/rating/rating.component';
 import { HomeComponent } from './layouts/home/home.component';
+import { NavigationComponent } from './layouts/navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HomeComponent } from './layouts/home/home.component';
     ProductsComponent,
     ProductsPipe,
     RatingComponent,
-    HomeComponent
+    HomeComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
