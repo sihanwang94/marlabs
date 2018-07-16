@@ -9,6 +9,7 @@ import { ProductsPipe } from './products/products.pipe';
 import { RatingComponent } from './products/rating/rating.component';
 import { HomeComponent } from './layouts/home/home.component';
 import { NavigationComponent } from './layouts/navigation/navigation.component';
+import { DetailsComponent } from './products/details/details.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NavigationComponent } from './layouts/navigation/navigation.component';
     ProductsPipe,
     RatingComponent,
     HomeComponent,
-    NavigationComponent
+    NavigationComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +27,7 @@ import { NavigationComponent } from './layouts/navigation/navigation.component';
     RouterModule.forRoot([
       { path:"home", component:HomeComponent },
       { path:"products", component:ProductsComponent},
+      { path:"details/:pCode", component:DetailsComponent },
       { path:"", redirectTo:"home", pathMatch:"full" },
       { path:"**", redirectTo:"home" }
     ])

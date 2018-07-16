@@ -25,7 +25,11 @@
           <img *ngIf="showHideImg" [src]="product.imageUrl" style="width:50px;"/>
         </td>
         <td>{{product.productName}}</td>
-        <td>{{product.productCode}}</td>
+        <td>
+          <a href="#" [routerLink]="['/details',product.productCode]">
+            {{product.productCode}}
+          </a>
+        </td>
         <td>{{product.releaseDate}}</td>
         <td>{{product.price}}</td>
         <td>
