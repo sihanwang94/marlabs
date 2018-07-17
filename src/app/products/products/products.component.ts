@@ -15,7 +15,9 @@ export class ProductsComponent implements OnInit {
   constructor(private _productsService : ProductsService) { }
 
   ngOnInit() {
-      this.products = this._productsService.getProducts();
+      this._productsService.getProducts().subscribe((data) => {
+        this.products = data;
+      });
   }
 
   toggleImage() : void {

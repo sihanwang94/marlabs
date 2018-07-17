@@ -9,6 +9,9 @@ export class ProductsService {
   constructor(private _http : HttpClient) { }
 
   getProducts() {
-      this._http.get('http://localhost:4000/getproducts');//asynchronous function cause http is asynchronous
+    //   this._http.get('http://localhost:4200/getproducts').subscribe((data) =>{
+    //     console.log(data);
+    //   });//asynchronous function because http is asynchronous
+    return this._http.get('http://localhost:4200/getproducts');
   }
 }

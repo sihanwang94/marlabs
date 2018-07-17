@@ -11,6 +11,7 @@ import { RatingComponent } from './products/rating/rating.component';
 import { HomeComponent } from './layouts/home/home.component';
 import { NavigationComponent } from './layouts/navigation/navigation.component';
 import { DetailsComponent } from './products/details/details.component';
+import { LoginComponent } from './auth/login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DetailsComponent } from './products/details/details.component';
     RatingComponent,
     HomeComponent,
     NavigationComponent,
-    DetailsComponent
+    DetailsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +32,7 @@ import { DetailsComponent } from './products/details/details.component';
       { path:"products", component:ProductsComponent},
       { path:"details/:pCode", component:DetailsComponent },
       { path:"", redirectTo:"home", pathMatch:"full" },
+      { path:"login", component:LoginComponent},
       { path:"**", redirectTo:"home" }
     ]),
     HttpClientModule
