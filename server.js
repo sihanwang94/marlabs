@@ -15,6 +15,10 @@ app.get('/profile', function(req, res) {
 });
 
 
+// app.use(cors(){
+//     origin:'http://localhost:4200/';
+// });
+
 app.get('/getdata/:username/:usercode', function(req, res) {
     // 原始操作是这样子的：
     // req.params.username
@@ -38,4 +42,8 @@ app.listen(3000, function(){
 
 // locolhost:4200/ => angular
 // locolhost:3000/ => node => apis
+// should use cors => cross origin resource sharing to share data
 //npm install nodemon
+
+//mongoose
+//sequalize => relational database
