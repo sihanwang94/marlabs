@@ -14,6 +14,7 @@ app.get('/profile', function(req, res) {
     res.sendFile(__dirname + 'view/profile.html');
 });
 
+
 app.get('/getdata/:username/:usercode', function(req, res) {
     // 原始操作是这样子的：
     // req.params.username
@@ -21,6 +22,11 @@ app.get('/getdata/:username/:usercode', function(req, res) {
     // console.log(req.params);
     // console.log(req.query);//后面加location=pis&weather=sunny
 
+});
+
+//post data should use bodyParser to pass the data, should install first
+app.post('/postdata', function(req, res) {
+    res.send('<h1>Hello</h1>');
 });
 
 app.use(function(req,res) {
